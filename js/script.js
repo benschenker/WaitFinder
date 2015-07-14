@@ -5,7 +5,9 @@ var map = L.mapbox.map('map', 'mapbox.streets')
 
 
 map.on('click', function(e) {
-	console.log('lat: ' + e.latlng.toString());
+	var coord = e.latlng;
+	console.log('lat: ' + coord.lat + ' long: ' + coord.lng);
+	L.marker([coord.lat, coord.lng]).addTo(map);
 });
 
 

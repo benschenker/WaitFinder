@@ -14,7 +14,7 @@ var data = {
     ]
 };
 //Take an array return average wait time in minutes.
-function getAverage(collection){
+var getAverage =function (collection){
     var sum = collection.reduce(function(accumulator, val){
         return accumulator + (val.timeArrived-val.timeCalled);
     }, 0);
@@ -23,5 +23,11 @@ function getAverage(collection){
 //Converting miliseconds to minutes.
     return average/60000;
 }
+//this is an example of how to use our function.
+//console.log(getAverage(data.result));
 
-console.log(getAverage(data.result));
+window.waitFinder = {
+  getAverage: getAverage,
+  testData: data.result
+  
+};

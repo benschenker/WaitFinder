@@ -1,5 +1,6 @@
 #map { 
 	height: 180px; 
+	width: 800px;
 	border: 1px black;
 	margin: auto;
 }

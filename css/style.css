@@ -1,6 +1,5 @@
 #map { 
 	height: 400px; 
-	width: 800px;
 	border: 1px blue;
 }
 
@@ -18,8 +17,15 @@ h1 {
 	font-family: arial;
 	
 }
+section {
+	margin: 10px;
+	color: #EEE;
+	
+}
 
-
+#ETA{
+	font-size: 30px;
+}
 /**{*/
 /*  outline: 1px solid blue*/
 /*}*/

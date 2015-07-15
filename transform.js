@@ -18,6 +18,18 @@ var getAverage =function (collection){
     var sum = collection.reduce(function(accumulator, val){
         return accumulator + (val.timeArrived-val.timeCalled);
     }, 0);
+    
+    /* Using moment.js
+    var getAverage =function (collection){
+        var sum = collection.reduce(function(accumulator, val){
+            var arrival = moment(val.timearrival)
+            var created = moment(val.timecreate)
+            return accumulator + (arrival.diff(created,"minutes"));
+        }, 0);
+        var average = sum/collection.length;
+        return average;
+    }
+    */
 
     var average = sum/collection.length;
 //Converting miliseconds to minutes.
@@ -29,5 +41,4 @@ var getAverage =function (collection){
 window.waitFinder = {
   getAverage: getAverage,
   testData: data.result
-  
 };
